@@ -21,6 +21,17 @@
       </div>
       <button type="submit" class="btn btn-default">Hae</button>
     </form>
+    <form class="navbar-form navbar-left">
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Valikko
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+        </ul>
+    </div>
+    </form>
 </nav>
 <div class="jumbotron text-center">
   <h1>My First Bootstrap Page</h1>
