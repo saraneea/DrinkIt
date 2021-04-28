@@ -34,8 +34,8 @@
     </form>
 </nav>
 <div class="jumbotron text-center">
-  <h1>My First Bootstrap Page</h1>
-  <p>Resize this responsive page to see the effect!</p> 
+  <h1>Tervetuloa drinkkimaailman ytimeen </h1>
+  <p>Täältä löydät drinkit joka lähtöön!</p> 
 </div>
 
 <div class="container">
