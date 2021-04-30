@@ -56,17 +56,8 @@
   <p>Täältä löydät drinkit joka lähtöön!</p> 
 </div>
 <div class="container">
-   
-  <div class="row">
-    <div class="col-md-6">
-      <button type="button" class="btn btn-success btn-lg">Aloita sekoittelu</button> 
-    </div>
-    <div class="col-md-6">
-      <button type="button" class="btn btn-success btn-lg">Selaa ohjeita</button>   
-    </div>
-  </div>
-    
-  
+</nav>     
+
 </div>
 <!-- livesearch -->
 <div class="container">
