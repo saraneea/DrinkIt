@@ -52,8 +52,7 @@
     </form>
 </nav>
 <div class="jumbotron text-center">
-  <h1>Tervetuloa drinkkimaailman ytimeen </h1>
-  <p>Täältä löydät drinkit joka lähtöön!</p> 
+  <h1>Drinkkiohjeet </h1> 
 </div>
 <div class="container">
 </nav>     
