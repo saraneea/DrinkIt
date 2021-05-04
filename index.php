@@ -6,9 +6,10 @@
   <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!--
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+ -->
   <!--JQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
@@ -86,12 +87,12 @@
       </form>
     <form class="navbar-form navbar-left">
       <div class="dropdown">
-       <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Valikko
+       <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Valikko
        <span class="caret"></span></button>
           <ul class="dropdown-menu">
-          <li><a href="#">HTML</a></li>
-          <li><a href="#">CSS</a></li>
-          <li><a href="#">JavaScript</a></li>
+          <li><a onclick="location.href='Drinkkiohjeet.php'">Drinkkiohjeet</a></li>
+          <li><a onclick="location.href='Sekoitus.php'">Sekoitus generaattori</a></li>
+          <li><a onclick="location.href='index.php'">Sekoitus</a></li>
           </ul>
       </div>
     </form>
@@ -108,7 +109,7 @@
       <center> <button type="button" class="btn btn-success btn-lg">Aloita sekoittelu</button> </center>
     </div>
     <div class="col-md-6">
-      <center> <button type="button" class="btn btn-success btn-lg">Selaa ohjeita</button>  </center>
+      <center> <button onclick="location.href='Drinkkiohjeet.php'" type="button" class="btn btn-success btn-lg">Selaa ohjeita</button>  </center>
     </div>
   </div>
     
@@ -117,6 +118,7 @@
 <hr />
 <!-- livesearch -->
 <div class="container">
+ 
   <div class="row">
     <div class="panel panel-info">
             
