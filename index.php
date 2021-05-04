@@ -72,10 +72,7 @@
     </div>
     <!--
     <form class="navbar-form navbar-right" action="/action_page.php">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search">
-      </div>
-      <button type="submit" class="btn btn-default">Hae</button>
+      
     </form> -->
     <form action="" class="navbar-form navbar-right" id="live-search" method="post">
             <div class="col-sm-10">
@@ -88,15 +85,15 @@
             </div>
       </form>
     <form class="navbar-form navbar-left">
-    <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Valikko
-        <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-            <li><a href="#">HTML</a></li>
-            <li><a href="#">CSS</a></li>
-            <li><a href="#">JavaScript</a></li>
-        </ul>
-    </div>
+      <div class="dropdown">
+       <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Valikko
+       <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          </ul>
+      </div>
     </form>
 </nav>
 <div class="jumbotron text-center">
@@ -108,30 +105,30 @@
    
   <div class="row">
     <div class="col-md-6">
-      <button type="button" class="btn btn-success btn-lg">Aloita sekoittelu</button> 
+      <center> <button type="button" class="btn btn-success btn-lg">Aloita sekoittelu</button> </center>
     </div>
     <div class="col-md-6">
-      <button type="button" class="btn btn-success btn-lg">Selaa ohjeita</button>   
+      <center> <button type="button" class="btn btn-success btn-lg">Selaa ohjeita</button>  </center>
     </div>
   </div>
     
   
 </div>
-
+<hr />
 <!-- livesearch -->
 <div class="container">
   <div class="row">
     <div class="panel panel-info">
-      <div class="panel-heading">
-        <h3 class="mg-clear tc-white">Live Search</h3>
-        <!--Online Texts--> 
-      </div>
+            
+        <!--Online Texts -->
+        
       <div class="panel-body">
+      <!--
         <div class="row">
           <form action="" class="" id="live-search" method="post">
             <div class="col-sm-12">
               <div class="input-group input-group-lg"> 
-                <!--<label class="control-label sr-only" for="filter">Title Search </label>-->
+                <!--<label class="control-label sr-only" for="filter">Title Search </label>
                 <input class="form-control input-lg" id="filter" type="text" value="" placeholder="Search..." />
                 <span class="input-group-btn">
                 <button class="btn btn-disabled" type="button">Matches <span id="filter-count" class="badge">0</span></button>
@@ -139,11 +136,12 @@
             </div>
           </form>
         </div>
-        <hr />
+        -->
+        
         <div class="col-sm-6 onlineText">
           <ul>
-            <a id="Names" title="Names of Boys and Girls">
-            <h4>Names</h4>
+            <a id="Ainesosat" title="Luettelo ainesosista">
+            <h4>Ainesosat</h4>
             </a>
             <li>Appelsiinimehu</li>
             <li>Vichy</li>
