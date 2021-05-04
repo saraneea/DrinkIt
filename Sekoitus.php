@@ -1,78 +1,175 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!--<link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico"> -->
+  <style type="text/CSS">
+    #panel1 {
+      align: center;
+      height: 350px;
+    }
 
-    <title>Starter Template for Bootstrap</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+    #panel2 {
+      height: 350px;
+      
+    }
+  </style>
+<head>
+  <title>DrinkIt</title>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!--
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ -->
+  <!--JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
-    <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+<!-- Bootstrap Javascript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
 
-    <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet">
-  </head>
+<script>
+  $(document).ready(function(){
+    $("#filter").keyup(function(){
+ 
+        // Retrieve the input field text and reset the count to zero
+        var filter = $(this).val(), count = 0;
+	// get the list to be searched				
+	var items = $(".onlineText li");
+	//get the total lenght for counting later
+	var totalItems = items.length;
+								
+        // Loop through the comment list
+        $(".onlineText li").each(function(){
+ 
+            // If the list item does not contain the text phrase fade it out
+            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                $(this).fadeOut();
+ 
+            // Show the list item if the phrase matches and increase the count by 1
+            } else {
+                $(this).show();
+                count++;
+            }
+        });
+ 
+        // Update the count
+        var numberItems = count;
+        //begin if to change colors for input group
+	if(count == totalItems){
+	 //If the count matches the total items in the list.  Set the text to 0 and remove Danger and Success Classes
+	 $("#filter-count").parent().removeClass('btn-success').removeClass('btn-danger');
+	 $("#filter-count").text(0);
+	}else if(count == 0){
+	 //If the count matches 0 in the list.  Set the text to 0 and Add Danger and Remove Success Class
+	 $("#filter-count").parent().removeClass('btn-success').addClass('btn-danger');
+	 $("#filter-count").text(0);
+	}else{
+	 //If the count is in between 0 and Total items in the list.  Set the text to the counter and Add Success and Remove Danger Class
+	 $("#filter-count").parent().addClass('btn-success').removeClass('btn-danger');
+	 $("#filter-count").text(count);
+	}
+    });
+});
+</script>
 
-  <body>
+</head>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+<body>
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">DrinkIt</a>
+    </div>
+    <!--
+    <form class="navbar-form navbar-right" action="/action_page.php">
+      
+    </form> -->
+    <form action="" class="navbar-form navbar-right" id="live-search" method="post">
+            <div class="col-sm-10">
+              <div class="input-group input-group-sm"> 
+                <!--<label class="control-label sr-only" for="filter">Title Search </label>-->
+                <input class="form-control input-lg" id="filter" type="text" value="" placeholder="Search..." />
+                <span class="input-group-btn">
+                <button class="btn btn-disabled" type="button">Matches <span id="filter-count" class="badge">0</span></button>
+                </span> </div>
             </div>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+      </form>
+    <form class="navbar-form navbar-left">
+      <div class="dropdown">
+       <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Valikko
+       <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+          <li><a onclick="location.href='Drinkkiohjeet.php'">Drinkkiohjeet</a></li>
+          <li><a onclick="location.href='Sekoitus.php'">Sekoitus generaattori</a></li>
+          <li><a onclick="location.href='index.php'">Sekoitus</a></li>
+          </ul>
       </div>
-    </nav>
+    </form>
+</nav>
+<div class="jumbotron text-center">
+  <h1>Lets mix it! </h1>
+  
+</div>
 
-    <main role="main" class="container">
-
-      <div class="starter-template">
-        <h1 style="color: red">Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+<hr />
+<!-- livesearch -->
+<div class="container">
+ 
+  <div class="row">
+    <div id="panel1" class="panel panel-default col-sm-4">  
+       <div class="panel-body">
+      <!--
+        <div class="row">
+          <form action="" class="" id="live-search" method="post">
+            <div class="col-sm-12">
+              <div class="input-group input-group-lg"> 
+                <!--<label class="control-label sr-only" for="filter">Title Search </label>
+                <input class="form-control input-lg" id="filter" type="text" value="" placeholder="Search..." />
+                <span class="input-group-btn">
+                <button class="btn btn-disabled" type="button">Matches <span id="filter-count" class="badge">0</span></button>
+                </span> </div>
+            </div>
+          </form>
+        </div>
+        -->
+        
+        <div class="col-sm-6 onlineText">
+          <ul>
+            <a id="Ainesosat" title="Luettelo ainesosista">
+            <h4>Ainesosat</h4>
+            </a>
+            <li>Appelsiinimehu</li>
+            <li>Vichy</li>
+            <li>Jallu</li>
+            <li>Appelsiinilikööri</li>
+            <li>Lime</li>
+            <li>Päärynälikööri</li>
+            <li>Sprite</li>
+            <li>Vodka</li>
+            <li>Kelkka</li>
+            <li>Kossuvichy</li>
+            <li>Villevallaton</li>
+            <li>Valkovenäläinen</li>
+          </ul>
+        </div>
+        
       </div>
+    </div>
+    
+    
+    <div id="panel2" class="panel panel-default col-sm-4">  
+       <div class="panel-body">
+            <a id="Valinnat" title="Valitsemasi ainesosat">
+            <h4>Valinnat</h4>
+       </div>
+    </div>
+    
+  </div>
+ 
+</div>
 
-    </main><!-- /.container -->
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-  </body>
+</body>
 </html>
-<h1>perkeleeee</h1>
-<h2> moroooo000 </h2>
-<h3> uuuuuiiiiii </h3>
-<p style="color: blue">homo.</p>
-

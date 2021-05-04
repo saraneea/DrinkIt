@@ -1,1 +1,18 @@
 /* tänne css muokkaus koodit*/
+
+
+#panel1 {
+  text-align: center;
+}
+
+
+#panel2 {
+    height: 50px;
+    color: blue;
+  }
+
+
+  p {
+    
+    color: red;
+  }
