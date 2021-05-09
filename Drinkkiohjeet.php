@@ -31,10 +31,12 @@
 
 
 
-
-
-
-
+</script>
+<style>
+#drinkkiohjeet {
+  height: 600px;
+  background-color: grey;
+}
 
 
 </style>
