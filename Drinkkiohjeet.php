@@ -31,12 +31,12 @@ $(document).ready(function(){
 <style>
 #section1 {
   height: 600px;
-  background-color: pink;
+  background-color: grey;
 }
 
 #section2 {
   height: 600px;
-  background-color: yellow;
+  background-color: grey;
 }
 </style>
 </head>
@@ -52,7 +52,7 @@ $(document).ready(function(){
 </div>
 
 <div class="main" id="section2">
-  <h2>Section 2</h2>
+  <h2>Varalta toinen</h2>
   <a href="#section1">Click Me to Smooth Scroll to Section 1 Above</a>
 </div>
 
