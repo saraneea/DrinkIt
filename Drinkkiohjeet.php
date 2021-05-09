@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
 
 </script>
 <style>
@@ -15,15 +17,15 @@
 
 <h1>Drinkkiohjeet</h1>
 
-<div class="main" id="section1">
+<div class="main" id="drinkkiohjeet">
   <h2>Selaa ohjeita</h2>
-  <a href="#section2">Alas</a>
+  <p>Jallukola</p>
+  <p>Valkovenäläinen</p>
+  <p>Kelkka</p>
+  <p>Kossyvissy</p>
 </div>
 
-<div class="main" id="section2">
-  <h2>Varalta toinen</h2>
-  <a href="#section1">Takas ylös</a>
-</div>
+
 
 </body>
 </html>
