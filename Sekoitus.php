@@ -74,7 +74,17 @@
     });
 });
 </script>
+<!-- Drinkkiohjehaku-->
+<script>
 
+  function move() {
+ // var ainesosa = document.getElementById("appelsiini").onclick
+  var node = document.createElement("LI");
+  var textnode = document.createTextNode("appelsiinimehu");
+  node.appendChild(textnode);
+  document.getElementById("lista").appendChild(node);
+}
+</script>
 </head>
 
 
@@ -141,7 +151,7 @@
             <a id="Ainesosat" title="Luettelo ainesosista">
             <h4>Ainesosat</h4>
             </a>
-            <li>Appelsiinimehu</li>
+           <a onclick="move()"> <li id="appelsiini">Appelsiinimehu</li> </a>
             <li>Vichy</li>
             <li>Jallu</li>
             <li>Appelsiinilikööri</li>
@@ -161,9 +171,12 @@
     
     
     <div id="panel2" class="panel panel-default col-sm-4">  
-       <div class="panel-body">
-            <a id="Valinnat" title="Valitsemasi ainesosat">
+       <div id="Valinnat"class="panel-body">
+            <a title="Valitsemasi ainesosat">
             <h4>Valinnat</h4>
+            <ul id="lista">
+               
+            </ul>
        </div>
     </div>
     
