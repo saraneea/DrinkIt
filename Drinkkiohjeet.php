@@ -9,10 +9,6 @@
   background-color: grey;
 }
 
-#section2 {
-  height: 600px;
-  background-color: grey;
-}
 </style>
 </head>
 <body>
