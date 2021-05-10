@@ -127,21 +127,27 @@
         </div>
         -->
         
-        <div class="col-sm-6 onlineText">
-          <ul>
-            <a id="Drinkkiohjeet" title="Luettelo valmiista ohjeista">
-            <h4>Ainesosat</h4>
-            </a>
-            <li>Välivesi</li>
-            <li>Tequila sunrise</li>
-            <li>Niskalaukaus</li>
-            <li>Viski-kola</li>
-            <li>Vodka-Appelsiini</li>
-            <li>Kossuvissy</li>
-            <li>Kelkka</li>
-            <li>Jallukola</li>
-          </ul>
-        </div>
+<div class="container">
+  <div class="row">
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="w-100"></div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+  </div>
+</div> 
+
+<div class="container">
+  <div class="row">
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="w-100"></div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+  </div>
+</div> 
+        
+       
       </div>
     </div>
   </div>
