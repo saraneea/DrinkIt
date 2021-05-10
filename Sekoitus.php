@@ -78,11 +78,19 @@
 <script>
 
   function move() {
- // var ainesosa = document.getElementById("appelsiini").onclick
+  
   var node = document.createElement("LI");
   var textnode = document.createTextNode("appelsiinimehu");
   node.appendChild(textnode);
   document.getElementById("lista").appendChild(node);
+
+  function move2(){
+    var node = document.createElement("LI");
+   // var siirtymis = document.getElementById("vichy");
+    var textnode = document.createTextNode("vichy");
+    node.appendChild(textnode);
+    document.getElementById("lista").appendChild(node);
+  }
 }
 </script>
 </head>
@@ -129,57 +137,41 @@
 <div class="container">
  
   <div class="row">
-    <div id="panel1" class="panel panel-default col-sm-4">  
-       <div class="panel-body">
-      <!--
-        <div class="row">
-          <form action="" class="" id="live-search" method="post">
-            <div class="col-sm-12">
-              <div class="input-group input-group-lg"> 
-                <!--<label class="control-label sr-only" for="filter">Title Search </label>
-                <input class="form-control input-lg" id="filter" type="text" value="" placeholder="Search..." />
-                <span class="input-group-btn">
-                <button class="btn btn-disabled" type="button">Matches <span id="filter-count" class="badge">0</span></button>
-                </span> </div>
-            </div>
-          </form>
-        </div>
-        -->
-        
-        <div class="col-sm-6 onlineText">
-          <ul>
-            <a id="Ainesosat" title="Luettelo ainesosista">
-            <h4>Ainesosat</h4>
-            </a>
-           <a onclick="move()"> <li id="appelsiini">Appelsiinimehu</li> </a>
-            <li>Vichy</li>
-            <li>Jallu</li>
-            <li>Appelsiinilikööri</li>
-            <li>Lime</li>
-            <li>Päärynälikööri</li>
-            <li>Sprite</li>
-            <li>Vodka</li>
-            <li>Kelkka</li>
-            <li>Kossuvichy</li>
-            <li>Villevallaton</li>
-            <li>Valkovenäläinen</li>
-          </ul>
-        </div>
-        
+
+    <div class="col-sm-6">
+      <div class="panel panel-default" style="height: 350px;">  
+        <div id="Valinnat"class="panel-body">       
+            <ul>
+              <a id="Ainesosat" title="Luettelo ainesosista">
+              <h4>Ainesosat</h4>
+              </a>
+              <a onclick="move()"> <li id="appelsiini">Appelsiinimehu</li> </a>
+              <a onclick="move2()"><li id="vichy">Vichy</li></a>
+              <li>Jallu</li>
+              <li>Appelsiinilikööri</li>
+              <li>Lime</li>
+              <li>Päärynälikööri</li>
+              <li>Sprite</li>
+              <li>Vodka</li>
+              <li>Kelkka</li>
+              <li>Kossuvichy</li>
+              <li>Villevallaton</li>
+              <li>Valkovenäläinen</li>
+            </ul>
+        </div>  
       </div>
     </div>
-    
-    
-    <div id="panel2" class="panel panel-default col-sm-4">  
-       <div id="Valinnat"class="panel-body">
-            <a title="Valitsemasi ainesosat">
-            <h4>Valinnat</h4>
-            <ul id="lista">
-               
-            </ul>
-       </div>
+  
+    <div class="col-sm-6">
+      <div class="panel panel-default" style="height: 350px;">  
+        <div id="Valinnat"class="panel-body">              
+              <ul id="lista">
+                <a title="Valitsemasi ainesosat">
+                <h4>Valinnat</h4>
+              </ul>
+        </div>
+      </div>
     </div>
-    
   </div>
  
 </div>
