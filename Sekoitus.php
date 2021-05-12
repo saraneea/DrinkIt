@@ -76,22 +76,52 @@
 </script>
 <!-- Drinkkiohjehaku-->
 <script>
+  
+  var ainesosat = {1:{id:"jallu", nimi:"Jallu"},
+                  2: {id: "appelsiinil", nimi:"Appelsiinilikööri"},
+                  3: {id: "lime", nimi:"Lime"},
+                  4: {id: "päärynäl", nimi:"Päärynälikööri"},
+                  5: {id: "sprite", nimi:"Sprite"},
+                  6: {id: "vodka", nimi:"Vodka"},
+                  7: {id: "vichy", nimi:"Vichy"},
+                  8: {id: "kossu ", nimi:"Kossu"}
+                   };
 
-  function move() {
+ var  valitut = {};
+
+ function move() {
   
   var node = document.createElement("LI");
   var textnode = document.createTextNode("appelsiinimehu");
   node.appendChild(textnode);
-  document.getElementById("lista").appendChild(node);
-
-  function move2(){
-    var node = document.createElement("LI");
-   // var siirtymis = document.getElementById("vichy");
-    var textnode = document.createTextNode("vichy");
-    node.appendChild(textnode);
-    document.getElementById("lista").appendChild(node);
+  document.getElementById("lista").appendChild(node); 
   }
-}
+
+ function ifClicked() {
+
+    if(document.getElementById(1).clicked == true ){
+        window.alert("ok"); 
+        var node = document.createElement("LI");
+        var textnode = document.createTextNode("Jallu");
+        node.appendChild(textnode);
+        document.getElementById("lista").appendChild(node); 
+      }
+    else{
+      window.alert("errori");
+      var node = document.createElement("LI");
+        var textnode = document.createTextNode("Jallu");
+        node.appendChild(textnode);
+        document.getElementById("lista").appendChild(node); 
+    }
+ }
+
+ function tarkistaId(){
+
+   if(document.getElementById("vichy").clicked == 1){
+     window.alert("ok");
+   }
+ }
+
 </script>
 </head>
 
@@ -146,8 +176,8 @@
               <h4>Ainesosat</h4>
               </a>
               <a onclick="move()"> <li id="appelsiini">Appelsiinimehu</li> </a>
-              <a onclick="move2()"><li id="vichy">Vichy</li></a>
-              <li>Jallu</li>
+              <a onclick="tarkistaId() id="vichy"> <li >Vichy</li></a>
+              <a onclick="ifClicked()" id=1> <li>Jallu</li> </a>
               <li>Appelsiinilikööri</li>
               <li>Lime</li>
               <li>Päärynälikööri</li>
