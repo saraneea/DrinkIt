@@ -117,28 +117,12 @@
 </div>
 <hr />
 <!-- livesearch -->
-<div class="container">
- 
+<div class="container"> 
   <div class="row">
-    <div class="panel panel-info">
-            
-        <!--Online Texts -->
-        
+    <div class="panel panel-info">            
+        <!--Online Texts -->        
       <div class="panel-body">
-      <!--
-        <div class="row">
-          <form action="" class="" id="live-search" method="post">
-            <div class="col-sm-12">
-              <div class="input-group input-group-lg"> 
-                <!--<label class="control-label sr-only" for="filter">Title Search </label>
-                <input class="form-control input-lg" id="filter" type="text" value="" placeholder="Search..." />
-                <span class="input-group-btn">
-                <button class="btn btn-disabled" type="button">Matches <span id="filter-count" class="badge">0</span></button>
-                </span> </div>
-            </div>
-          </form>
-        </div>
-        -->
+  
         
         <div class="col-sm-6 onlineText">
           <ul>
