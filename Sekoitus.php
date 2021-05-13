@@ -1,17 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <style type="text/CSS">
-    #panel1 {
-      align: center;
-      height: 350px;
-    }
+  
+<style>
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
 
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
 
-    #panel2 {
-      height: 350px;
-      
-    }
-  </style>
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
 <head>
   <title>DrinkIt</title>
   <meta charset="utf-8">
@@ -115,13 +157,31 @@
     }
  }
 
- function tarkistaId(){
 
-   if(document.getElementById("vichy").clicked == 1){
-     window.alert("ok");
-   }
- }
+</script>
 
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
 </script>
 </head>
 
@@ -139,7 +199,10 @@
             <div class="col-sm-10">
               <div class="input-group input-group-sm"> 
                 <!--<label class="control-label sr-only" for="filter">Title Search </label>-->
-                <input class="form-control input-lg" id="filter" type="text" value="" placeholder="Search..." />
+                 
+                   
+                   <input class="form-control input-lg" id="filter" type="text" value="" placeholder="Search..." />
+                  
                 <span class="input-group-btn">
                 <button class="btn btn-disabled" type="button">Matches <span id="filter-count" class="badge">0</span></button>
                 </span> </div>
@@ -152,7 +215,7 @@
           <ul class="dropdown-menu">
           <li><a onclick="location.href='Drinkkiohjeet.php'">Drinkkiohjeet</a></li>
           <li><a onclick="location.href='Sekoitus.php'">Sekoitus generaattori</a></li>
-          <li><a onclick="location.href='index.php'">Sekoitus</a></li>
+          <li><a onclick="location.href='index.php'">Etusivu</a></li>
           </ul>
       </div>
     </form>
@@ -176,17 +239,14 @@
               <h4>Ainesosat</h4>
               </a>
               <a onclick="move()"> <li id="appelsiini">Appelsiinimehu</li> </a>
-              <a onclick="tarkistaId() id="vichy"> <li >Vichy</li></a>
+              <a onclick="tarkistaId()" id="vichy"> <li >Vichy</li></a>
               <a onclick="ifClicked()" id=1> <li>Jallu</li> </a>
               <li>Appelsiinilikööri</li>
               <li>Lime</li>
               <li>Päärynälikööri</li>
               <li>Sprite</li>
               <li>Vodka</li>
-              <li>Kelkka</li>
-              <li>Kossuvichy</li>
-              <li>Villevallaton</li>
-              <li>Valkovenäläinen</li>
+              
             </ul>
         </div>  
       </div>
@@ -203,8 +263,23 @@
       </div>
     </div>
   </div>
+
+  <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="#about">About</a>
+    <a href="#base">Base</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+    <a href="#custom">Custom</a>
+    <a href="#support">Support</a>
+    <a href="#tools">Tools</a>
+  </div>
+</div>
  
 </div>
 
 </body>
 </html>
+
