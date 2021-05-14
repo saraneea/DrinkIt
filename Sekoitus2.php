@@ -70,11 +70,7 @@ function move() {
   var textnode = document.createTextNode("appelsiinimehu");
   node.appendChild(textnode);
   document.getElementById("lista").appendChild(node); 
-  $(function () {
-    $("#test").click(function(){alert('test');});
-    $("#test").off('click');
-
-});
+  
 }
 </script>
 
