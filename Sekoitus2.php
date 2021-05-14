@@ -65,13 +65,15 @@
 
 var cliked = false;
 function move() {
- 
+  var valinnat [];
   var node = document.createElement("LI");
   var textnode = document.createTextNode("appelsiinimehu");
   node.appendChild(textnode);
   document.getElementById("lista").appendChild(node); 
+  document.getElementById("appelsiini").disabled = true;
   
 }
+
 </script>
 
 </head>
@@ -126,7 +128,7 @@ function move() {
                     <a id="Ainesosat" title="Luettelo ainesosista">
                     <h4>Ainesosat</h4>
                     </a>
-                    <li onclick="move()">Appelsiinimehu</li>
+                    <li onclick="move()" id="appelsiini">Appelsiinimehu</li>
                     <li>Vichy</li>
                     <li>Jallu</li>
                     <li>Appelsiinilikööri</li>
@@ -155,3 +157,23 @@ function move() {
 </body>
 </html>
 
+<?php
+class Drinkki {
+    // Properties
+    public $nimi;
+    public $ainesosa;
+    public $holi_prosentti;
+    // Methods
+    function set_nimi($nimi) {
+      $this->nimi = $nimi;
+    }
+    function get_nimi() {
+      return $this->nimi;
+    }
+  }
+
+class Ainesosia extends Drinkki{
+
+
+}
+?>
