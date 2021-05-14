@@ -1,5 +1,5 @@
 <?php
-class Drinkki {
+public class Drinkki {
   // Properties
   public $nimi;
   public $ainesosa;
