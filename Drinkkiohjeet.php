@@ -150,7 +150,22 @@
     <div class="col"><center>Kossu-appelsiini</center></div>
   </div>
 </div> 
-        
+  
+<?php
+public class Drinkki {
+  // Properties
+  public $nimi;
+  public $ainesosa;
+  public $holi_prosentti;
+  // Methods
+  function set_nimi($nimi) {
+    $this->nimi = $nimi;
+  }
+  function get_nimi() {
+    return $this->nimi;
+  }
+}
+?>
        
       </div>
     </div>
