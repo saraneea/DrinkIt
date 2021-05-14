@@ -61,6 +61,21 @@
 	}
     });
 });
+
+
+var cliked = false;
+function move() {
+ 
+  var node = document.createElement("LI");
+  var textnode = document.createTextNode("appelsiinimehu");
+  node.appendChild(textnode);
+  document.getElementById("lista").appendChild(node); 
+  $(function () {
+    $("#test").click(function(){alert('test');});
+    $("#test").off('click');
+
+});
+}
 </script>
 
 </head>
@@ -79,7 +94,7 @@
             <div class="col-sm-10">
               <div class="input-group input-group-sm"> 
                 <!--<label class="control-label sr-only" for="filter">Title Search </label>-->
-                <input class="form-control input-lg" id="filter" type="text" value="" placeholder="Search..." />
+                <input class="form-control input-lg" id="filter" type="text" value="" placeholder="Search..." maxlength="20"/>
                 <span class="input-group-btn">
                 <button class="btn btn-disabled" type="button">Matches <span id="filter-count" class="badge">0</span></button>
                 </span> </div>
@@ -98,44 +113,43 @@
     </form>
 </nav>
 <div class="jumbotron text-center">
-  <h1>Tervetuloa drinkkimaailman ytimeen </h1>
-  <p>Täältä löydät drinkit joka lähtöön!</p> 
+  <h1>Sekoitellaan! </h1>
+ 
 </div>
 
-<div class="container">
-   
-  <div class="row">
-    <div class="col-md-6">
-      <center> <button type="button" class="btn btn-success btn-lg">Aloita sekoittelu</button> </center>
-    </div>
-    <div class="col-md-6">
-      <center> <button onclick="location.href='Drinkkiohjeet.php'" type="button" class="btn btn-success btn-lg">Selaa ohjeita</button>  </center>
-    </div>
-  </div>
-    
-  
-</div>
 <hr />
 <!-- livesearch -->
 <div class="container"> 
   <div class="row">
-    <div class="panel panel-info">            
-        <!--Online Texts -->        
-      <div class="panel-body">        
-        <div class="col-sm-6 onlineText">
-          <ul>
-            <a id="Ainesosat" title="Luettelo ainesosista">
-            <h4>Ainesosat</h4>
-            </a>
-            <li>Appelsiinimehu</li>
-            <li>Vichy</li>
-            <li>Jallu</li>
-            <li>Appelsiinilikööri</li>
-            <li>Lime</li>
-            <li>Päärynälikööri</li>
-            <li>Sprite</li>
-            <li>Vodka</li>
-          </ul>
+    <div class="col-sm-6">
+        <div class="panel panel-info" style="height: 350px;">            
+            <!--Online Texts -->        
+            <div class="panel-body">        
+                <div class="col-sm-6 onlineText">
+                <ul>
+                    <a id="Ainesosat" title="Luettelo ainesosista">
+                    <h4>Ainesosat</h4>
+                    </a>
+                    <li onclick="move()">Appelsiinimehu</li>
+                    <li>Vichy</li>
+                    <li>Jallu</li>
+                    <li>Appelsiinilikööri</li>
+                    <li>Lime</li>
+                    <li>Päärynälikööri</li>
+                    <li>Sprite</li>
+                    <li>Vodka</li>
+                </ul>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <div class="col-sm-6">
+      <div class="panel panel-default" style="height: 350px;">  
+        <div id="Valinnat"class="panel-body">              
+              <ul id="lista">
+                <a title="Valitsemasi ainesosat">
+                <h4>Valinnat</h4>
+              </ul>
         </div>
       </div>
     </div>
@@ -144,3 +158,4 @@
 
 </body>
 </html>
+
