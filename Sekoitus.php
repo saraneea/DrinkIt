@@ -106,10 +106,19 @@
 
 .jumbotron {
   
-  background-image: url("https://images.unsplash.com/photo-1592647416745-3db83f5590d7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  background-image: url("https://images.unsplash.com/photo-1525268323446-0505b6fe7778?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80");
   background-size: cover;
-  height: 350px;
+  height: 400px;
+  width: auto;
+  padding-top: 0px;
 }
+
+.teksti{
+  text-align: center;
+  font-family: "Courier New";
+  padding-top: 160px;
+}
+
 </style>
 </head>
 
@@ -143,11 +152,10 @@
     </form>
 </nav>
 <div class="jumbotron">
-  <h1 style="text-align: center">Lets mix it! </h1>
+  <h1 class="teksti" style="color: black" >Lets mix it! </h1>
   
 </div>
 
-<hr />
 <!-- livesearch -->
 <div class="container"> 
   <div class="row">
