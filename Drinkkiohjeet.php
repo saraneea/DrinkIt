@@ -129,24 +129,18 @@
         
 <div class="container">
   <div class="row">
-    <div class="col"> <center>Absintti </center></div>
-    <div class="col"> <center> Minttukaakao</center></div>
-    <div class="w-100"></div>
-    <div class="col"><center>Jekkupommi</center></div>
-    <div class="col"><center>Viskikola</center></div>
-  </div>
-</div> 
-
-<div class="container">
-  <div class="row">
     <div class="col"><center>Kelkka</center></div>
     <div class="col"><center>Välivesi</center></div>
+    <div class="col"> <center>Absintti </center></div>
+    <div class="col"> <center> Minttukaakao</center></div>
     <div class="w-100"></div>
     <div class="col"><center>Jallukola</center></div>
     <div class="col"><center>Kossuvissy</center></div>
     <div class="col"><center>Tequila Sunrise</center></div>
     <div class="col"><center>Pina Colada</center></div>
     <div class="col"><center>Blue Laguun</center></div>
+    <div class="col"><center>Jekkupommi</center></div>
+    <div class="col"><center>Viskikola</center></div>
     <div class="col"><center>Kossu-appelsiini</center></div>
   </div>
 </div> 
