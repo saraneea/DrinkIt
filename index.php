@@ -6,10 +6,8 @@
   <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <!--
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
- -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+  
   <!--JQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
@@ -66,6 +64,44 @@
 </head>
 
 
+<style>
+.jumbotron {
+  
+  background-image: url("https://images.unsplash.com/photo-1525268323446-0505b6fe7778?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80");
+  background-size: cover;
+  height: 400px;
+  width: auto; 
+  
+}
+
+.teksti{
+  text-align: center;
+  font-family: "Pacifico";
+  padding-top: 100px;
+  text-shadow: 0 0 5px #FF0000;
+  
+}
+
+.navbar{
+  height: 60px;
+  margin-bottom:0px;
+  background-color: white ;
+}
+
+.btn{
+
+  border-style: round;
+  border-color: #404040;
+  border-width: 2px;
+  
+}
+
+.navbar-brand{
+  font-family: "Pacifico";
+  color: black;
+}
+
+</style>
 <body>
 <nav class="navbar navbar-default">
     <div class="navbar-header">
@@ -79,7 +115,7 @@
             <div class="col-sm-10">
               <div class="input-group input-group-sm"> 
                 <!--<label class="control-label sr-only" for="filter">Title Search </label>-->
-                <input class="form-control input-lg" id="filter" type="text" value="" placeholder="Search..." />
+                <input class="form-control input-lg" id="filter" type="text" value="" placeholder="Search..."/>
                 <span class="input-group-btn">
                 <button class="btn btn-disabled" type="button">Matches <span id="filter-count" class="badge">0</span></button>
                 </span> </div>
@@ -87,29 +123,28 @@
       </form>
     <form class="navbar-form navbar-left">
       <div class="dropdown">
-       <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Valikko
+       <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Valikko
        <span class="caret"></span></button>
           <ul class="dropdown-menu">
           <li><a onclick="location.href='Drinkkiohjeet.php'">Drinkkiohjeet</a></li>
-          <li><a onclick="location.href='Sekoitus.php'">Sekoitus generaattori</a></li>
+          <li><a onclick="location.href='Sekoitus2.php'">Sekoitus generaattori</a></li>
           <li><a onclick="location.href='index.php'">Etusivu</a></li>
           </ul>
       </div>
     </form>
 </nav>
 <div class="jumbotron text-center">
-  <h1>Tervetuloa drinkkimaailman ytimeen </h1>
-  <p>Täältä löydät drinkit joka lähtöön!</p> 
+  <h1 class="teksti" style="color: black">Tervetuloa drinkkimaailman ytimeen </h1>
 </div>
 
 <div class="container">
    
   <div class="row">
     <div class="col-md-6">
-      <center> <button type="button" class="btn btn-success btn-lg">Aloita sekoittelu</button> </center>
+      <center> <button onclick="location.href='Sekoitus2.php'" type="button" class="btn btn-lg">Aloita sekoittelu</button> </center>
     </div>
     <div class="col-md-6">
-      <center> <button onclick="location.href='Drinkkiohjeet.php'" type="button" class="btn btn-success btn-lg">Selaa ohjeita</button>  </center>
+      <center> <button onclick="location.href='Drinkkiohjeet.php'" type="button" class="btn btn-lg">Selaa ohjeita</button>  </center>
     </div>
   </div>
     
