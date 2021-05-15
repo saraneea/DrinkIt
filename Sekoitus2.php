@@ -65,7 +65,7 @@
 
 var cliked = false;
 function move() {
-  var valinnat [];
+  var valinnat = [];
   var node = document.createElement("LI");
   var textnode = document.createTextNode("appelsiinimehu");
   node.appendChild(textnode);
@@ -73,9 +73,40 @@ function move() {
   document.getElementById("appelsiini").disabled = true;
   
 }
+  
+var ainesosat = {1:{id:"jallu", nimi:"Jallu"},
+                  2: {id: "appelsiinil", nimi:"Appelsiinilikööri"},
+                  3: {id: "lime", nimi:"Lime"},
+                  4: {id: "päärynäl", nimi:"Päärynälikööri"},
+                  5: {id: "sprite", nimi:"Sprite"},
+                  6: {id: "vodka", nimi:"Vodka"},
+                  7: {id: "vichy", nimi:"Vichy"},
+                  8: {id: "kossu ", nimi:"Kossu"}
+                   };
+
+var  ainesosat2 = ["Appelsiinimehu","Vichy","Jallu","Appelsiinilikööri","Lime","Päärynälikööri","Sprite","Vodka"];
+var valinnat = [];
 
 </script>
+<!--id nouto-->
+<script type="text/javascript">
+  function reply_click(clicked_id)
+  {
+      alert(clicked_id);
+      para = document.getElementById(clicked_id).innerText;
 
+      var node = document.createElement("LI");
+      var textnode = document.createTextNode(para);
+      node.appendChild(textnode);
+      document.getElementById("lista").appendChild(node); 
+      
+      //taulukkoon pitäisi saada parametri string muodossa
+      valinnat.push(para);
+  }
+
+ 
+</script>
+<!---->
 </head>
 
 
@@ -129,13 +160,13 @@ function move() {
                     <h4>Ainesosat</h4>
                     </a>
                     <li onclick="move()" id="appelsiini">Appelsiinimehu</li>
-                    <li>Vichy</li>
-                    <li>Jallu</li>
-                    <li>Appelsiinilikööri</li>
-                    <li>Lime</li>
-                    <li>Päärynälikööri</li>
-                    <li>Sprite</li>
-                    <li>Vodka</li>
+                    <li id="vichy">Vichy</li>
+                    <li id="jallu" onClick="reply_click(this.id)">Jallu</li>
+                    <li id="appelsiinil">Appelsiinilikööri</li>
+                    <li id="lime">Lime</li>
+                    <li id="päärynäl">Päärynälikööri</li>
+                    <li id="sprite">Sprite</li>
+                    <li id="vodka">Vodka</li>
                 </ul>
                 </div>
             </div>
@@ -147,6 +178,7 @@ function move() {
               <ul id="lista">
                 <a title="Valitsemasi ainesosat">
                 <h4>Valinnat</h4>
+                
               </ul>
         </div>
       </div>
@@ -160,15 +192,15 @@ function move() {
 <?php
 class Drinkki {
     // Properties
-    public $nimi;
+    public $id;
     public $ainesosa;
     public $holi_prosentti;
     // Methods
-    function set_nimi($nimi) {
-      $this->nimi = $nimi;
+    function set_id($id) {
+      $this->id = $id;
     }
-    function get_nimi() {
-      return $this->nimi;
+    function get_id() {
+      return $this->id;
     }
   }
 
