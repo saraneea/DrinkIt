@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  
 <head>
   <title>DrinkIt</title>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
- 
+  <!--
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ -->
   <!--JQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-
 <!-- Bootstrap CSS -->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
 <!-- Bootstrap Javascript -->
@@ -58,77 +59,35 @@
 	}
     });
 });
-</script>
-<!-- Drinkkiohjehaku-->
-<script>
-  
-  var ainesosat = {1:{id:"jallu", nimi:"Jallu"},
-                  2: {id: "appelsiinil", nimi:"Appelsiinilikööri"},
-                  3: {id: "lime", nimi:"Lime"},
-                  4: {id: "päärynäl", nimi:"Päärynälikööri"},
-                  5: {id: "sprite", nimi:"Sprite"},
-                  6: {id: "vodka", nimi:"Vodka"},
-                  7: {id: "vichy", nimi:"Vichy"},
-                  8: {id: "kossu ", nimi:"Kossu"}
-                   };
-
- var  ainesosat2 = ["Appelsiinimehu","Vichy","Jallu","Appelsiinilikööri","Lime","Päärynälikööri","Sprite","Vodka"];
-
- function move() {
-  
-  var node = document.createElement("LI");
-  var textnode = document.createTextNode("appelsiinimehu");
-  node.appendChild(textnode);
-  document.getElementById("lista").appendChild(node); 
-  }
-
- function ifClicked() {
-
-    if(document.getElementById(1).clicked == true ){
-        window.alert("ok"); 
-        var node = document.createElement("LI");
-        var textnode = document.createTextNode("Jallu");
-        node.appendChild(textnode);
-        document.getElementById("lista").appendChild(node); 
-      }
-    else{
-      window.alert("errori");
-      var node = document.createElement("LI");
-        var textnode = document.createTextNode("Jallu");
-        node.appendChild(textnode);
-        document.getElementById("lista").appendChild(node); 
-    }
- }
 
 
 </script>
-<style>
 
-.jumbotron {
-  
-  background-image: url("https://images.unsplash.com/photo-1525268323446-0505b6fe7778?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80");
-  background-size: cover;
-  height: 400px;
-  width: auto;
-  padding-top: 0px;
-}
 
-.teksti{
-  text-align: center;
-  font-family: "Courier New";
-  padding-top: 160px;
-}
 
-</style>
+<script> 
+
+var kossuvissy = ["vodka", "vissy"];
+var viskikola = ["viski","coca-cola"];
+var vodka_appelsiini = ["vodka", "appelsiini"];
+var blue_lagoon = ["blue-curaqao","sprite"];
+var pina_colada = ["kookos", "vodka"];
+var kelkka = ["vodka", "appelsiini", "karpalo"];
+var tequila_sunrise = ["tequila", "passion"];
+var niskalaukaus = ["absintti"];
+
+</script>
+
 </head>
-
-
 <body>
 <nav class="navbar navbar-default">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">DrinkIt</a>
     </div>
- 
+    <!--
+    <form class="navbar-form navbar-right" action="/action_page.php">
+      
+    </form> -->
     <form action="" class="navbar-form navbar-right" id="live-search" method="post">
             <div class="col-sm-10">
               <div class="input-group input-group-sm"> 
@@ -146,53 +105,71 @@
           <ul class="dropdown-menu">
           <li><a onclick="location.href='Drinkkiohjeet.php'">Drinkkiohjeet</a></li>
           <li><a onclick="location.href='Sekoitus.php'">Sekoitus generaattori</a></li>
-          <li><a onclick="location.href='index.php'">Etusivu</a></li>
+          <li><a onclick="location.href='index.php'">Sekoitus</a></li>
           </ul>
       </div>
     </form>
 </nav>
-<div class="jumbotron">
-  <h1 class="teksti" style="color: black" >Lets mix it! </h1>
+<div class="jumbotron text-center">
+  <h1>Drinkkiohjeet </h1>
+  <p>Selaa valmiita ohjeita</p> 
+</div>
+<div class="container">
+   
+
+    
   
 </div>
-
+<hr />
 <!-- livesearch -->
-<div class="container"> 
+<div class="container">
+ 
   <div class="row">
-    <div class="col-sm-6">
-      <div class="panel panel-default" style="height: 350px;">  
-        <div class="panel-body">       
-            <ul>
-              <a title="Luettelo ainesosista">
-              <h4>Ainesosat</h4>
-              </a>
-              <li>Appelsiinimehu</li>
-              <li >Vichy</li>
-              <li>Jallu</li>
-              <li>Appelsiinilikööri</li>
-              <li>Lime</li>
-              <li>Päärynälikööri</li>
-              <li>Sprite</li>
-              <li>Vodka</li>
-              
-            </ul>
-        </div>  
-      </div>
-    </div>
-  
-    <div class="col-sm-6">
-      <div class="panel panel-default" style="height: 350px;">  
-        <div id="Valinnat"class="panel-body">              
-              <ul id="lista">
-                <a title="Valitsemasi ainesosat">
-                <h4>Valinnat</h4>
-              </ul>
+    <div class="panel panel-info">
+            
+        <!--Online Texts -->
+        
+      <div class="panel-body">
+      <!--
+        <div class="row">
+          <form action="" class="" id="live-search" method="post">
+            <div class="col-sm-12">
+              <div class="input-group input-group-lg"> 
+                <!--<label class="control-label sr-only" for="filter">Title Search </label>
+                <input class="form-control input-lg" id="filter" type="text" value="" placeholder="Search..." />
+                <span class="input-group-btn">
+                <button class="btn btn-disabled" type="button">Matches <span id="filter-count" class="badge">0</span></button>
+                </span> </div>
+            </div>
+          </form>
         </div>
+        -->
+        
+
+<div class="container">
+  <div class="row">
+    <div class="col"><center>Kelkka</center></div>
+    <div class="col"><center>Välivesi</center></div>
+    <div class="w-100"></div>
+    <div class="col"><center>Jallukola</center></div>
+    <div class="col"><center>Kossuvissy</center></div>
+    <div class="col"><center>Tequila Sunrise</center></div>
+    <div class="col"><center>Pina Colada</center></div>
+    <div class="col"><center>Blue Laguun</center></div>
+    <div class="col"><center>Kossu-appelsiini</center></div>
+  </div>
+</div> 
+  
+
+
+       
       </div>
     </div>
   </div>
-
 </div>
 </body>
 </html>
 
+
+
+   

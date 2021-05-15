@@ -59,7 +59,25 @@
 	}
     });
 });
+
+
 </script>
+
+
+
+<script> 
+
+var kossuvissy = ["vodka", "vissy"];
+var viskikola = ["viski","coca-cola"];
+var vodka_appelsiini = ["vodka", "appelsiini"];
+var blue_lagoon = ["blue-curaqao","sprite"];
+var pina_colada = ["kookos", "vodka"];
+var kelkka = ["vodka", "appelsiini", "karpalo"];
+var tequila_sunrise = ["tequila", "passion"];
+var niskalaukaus = ["absintti"];
+
+</script>
+
 </head>
 <body>
 <nav class="navbar navbar-default">
@@ -127,24 +145,22 @@
         </div>
         -->
         
+
 <div class="container">
   <div class="row">
     <div class="col"><center>Kelkka</center></div>
     <div class="col"><center>Välivesi</center></div>
-    <div class="col"> <center>Absintti </center></div>
-    <div class="col"> <center> Minttukaakao</center></div>
     <div class="w-100"></div>
     <div class="col"><center>Jallukola</center></div>
     <div class="col"><center>Kossuvissy</center></div>
     <div class="col"><center>Tequila Sunrise</center></div>
     <div class="col"><center>Pina Colada</center></div>
     <div class="col"><center>Blue Laguun</center></div>
-    <div class="col"><center>Jekkupommi</center></div>
-    <div class="col"><center>Viskikola</center></div>
     <div class="col"><center>Kossu-appelsiini</center></div>
   </div>
 </div> 
   
+
 
        
       </div>
@@ -156,29 +172,4 @@
 
 
 
-<?php
-class Drinkki {
-  // Properties
-  public $nimi;
-  public $ainesosa;
-  public $holi_prosentti;
-
-    function set_nimi($nimi) {
-    $this->nimi = $nimi;
-  }
-  function set_ainesosa($ainesosa) {
-     $this->ainesosa = $ainesosa;
-  }
-  function set_holi_prosentti($holi_prosentti) {
-    $this->holi_prosentti = $holi_prosentti;
-}
-
-
-var $rinkki = new Drinkki();
-$rinkki->set_nimi('Kossuvissy');
-$rinkki->set_ainesosa('vodka');
-$rinkki->set_holiprosentti('100');
-echo "Nimi: " . $apple->get_nimi();
-echo "Ainesosa";
-echo "Prosentti: " . $apple->get_holi_prosentti();
-?>
+   
