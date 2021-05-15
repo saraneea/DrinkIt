@@ -173,3 +173,13 @@ public class Drinkki {
 </div>
 </body>
 </html>
+
+
+<?php
+public class Drinkki {
+  // Properties
+  public $nimi;
+  public $ainesosa;
+  public $holi_prosentti;
+}
+?>
