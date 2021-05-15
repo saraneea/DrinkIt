@@ -6,10 +6,8 @@
   <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <!--
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
- -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+ 
   <!--JQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
@@ -84,43 +82,76 @@ var ainesosat = {1:{id:"jallu", nimi:"Jallu"},
                   8: {id: "kossu ", nimi:"Kossu"}
                    };
 
-var  ainesosat2 = ["Appelsiinimehu","Vichy","Jallu","Appelsiinilikööri","Lime","Päärynälikööri","Sprite","Vodka"];
+
 var valinnat = [""];
 
 </script>
-<!--id nouto-->
-<script type="text/javascript">
-  function reply_click(clicked_id)
-  {
-      alert(clicked_id);
-      para = document.getElementById(clicked_id).innerText;
+  <!--id nouto-->
+  <script type="text/javascript">
+    function reply_click(clicked_id)
+    {
+        alert(clicked_id);
+        para = document.getElementById(clicked_id).innerText;
 
-      var node = document.createElement("LI");
-      var textnode = document.createTextNode(para);
-      node.appendChild(textnode);
-      document.getElementById("lista").appendChild(node); 
-      
-      
-      valinnat += [para];
-      alert(valinnat);
+        var node = document.createElement("LI");
+        var textnode = document.createTextNode(para);
+        node.appendChild(textnode);
+        document.getElementById("lista").appendChild(node); 
+        
+        
+        valinnat += [para];
+        alert(valinnat);
 
-  }
-
- 
-</script>
-<!---->
+    } 
+  </script>
+  <!---->
 </head>
+
+
+<style>
+.jumbotron {
+  
+  background-image: url("https://images.unsplash.com/photo-1525268323446-0505b6fe7778?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80");
+  background-size: cover;
+  height: 400px;
+  width: auto; 
+  
+}
+
+.teksti{
+  text-align: center;
+  font-family: "Pacifico";
+  padding-top: 100px;
+  text-shadow: 0 0 5px #FF0000;
+}
+
+.navbar{
+  height: 60px;
+  margin-bottom:0px;
+  background-color: white ;
+}
+
+.btn{
+
+  border-style: round;
+  border-color: #404040;
+  border-width: 2px;
+}
+
+.navbar-brand{
+  font-family: "Pacifico";
+  color: black;
+}
+
+</style>
 
 
 <body>
 <nav class="navbar navbar-default">
-    <div class="navbar-header">
+  <div class="navbar-header">
       <a class="navbar-brand" href="#">DrinkIt</a>
-    </div>
-    <!--
-    <form class="navbar-form navbar-right" action="/action_page.php">
-      
-    </form> -->
+  </div> 
+
     <form action="" class="navbar-form navbar-right" id="live-search" method="post">
             <div class="col-sm-10">
               <div class="input-group input-group-sm"> 
@@ -133,7 +164,7 @@ var valinnat = [""];
       </form>
     <form class="navbar-form navbar-left">
       <div class="dropdown">
-       <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Valikko
+       <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Valikko
        <span class="caret"></span></button>
           <ul class="dropdown-menu">
           <li><a onclick="location.href='Drinkkiohjeet.php'">Drinkkiohjeet</a></li>
@@ -143,17 +174,16 @@ var valinnat = [""];
       </div>
     </form>
 </nav>
-<div class="jumbotron text-center">
-  <h1>Sekoitellaan! </h1>
+<div class="jumbotron">
+  <h1 class="teksti" style="color: black" >Let's mix it! </h1>
  
 </div>
 
-<hr />
 <!-- livesearch -->
-<div class="container"> 
+<div class="container">  
   <div class="row">
     <div class="col-sm-6">
-        <div class="panel panel-info" style="height: 350px;">            
+        <div class="panel panel-default" style="height: 350px;">            
             <!--Online Texts -->        
             <div class="panel-body">        
                 <div class="col-sm-6 onlineText">

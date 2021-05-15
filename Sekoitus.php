@@ -92,7 +92,7 @@ var niskalaukaus = ["absintti"];
             <div class="col-sm-10">
               <div class="input-group input-group-sm"> 
                 <!--<label class="control-label sr-only" for="filter">Title Search </label>-->
-                <input class="form-control input-lg" id="filter" type="text" value="" placeholder="Search..." />
+                <input class="form-control input-lg" id="filter" type="text" value="" placeholder="Search..."/>
                 <span class="input-group-btn">
                 <button class="btn btn-disabled" type="button">Matches <span id="filter-count" class="badge">0</span></button>
                 </span> </div>
