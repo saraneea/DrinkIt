@@ -85,7 +85,7 @@ var ainesosat = {1:{id:"jallu", nimi:"Jallu"},
                    };
 
 var  ainesosat2 = ["Appelsiinimehu","Vichy","Jallu","Appelsiinilikööri","Lime","Päärynälikööri","Sprite","Vodka"];
-var valinnat = [];
+var valinnat = [""];
 
 </script>
 <!--id nouto-->
@@ -100,8 +100,10 @@ var valinnat = [];
       node.appendChild(textnode);
       document.getElementById("lista").appendChild(node); 
       
-      //taulukkoon pitäisi saada parametri string muodossa
-      valinnat.push(para);
+      
+      valinnat += [para];
+      alert(valinnat);
+
   }
 
  
@@ -156,17 +158,18 @@ var valinnat = [];
             <div class="panel-body">        
                 <div class="col-sm-6 onlineText">
                 <ul>
-                    <a id="Ainesosat" title="Luettelo ainesosista">
+                    <div id="Ainesosat" title="Luettelo ainesosista">
                     <h4>Ainesosat</h4>
-                    </a>
-                    <li onclick="move()" id="appelsiini">Appelsiinimehu</li>
-                    <li id="vichy">Vichy</li>
+                    </div>
+                   
+                    <li id="appelsiini" onClick="reply_click(this.id)">Appelsiinimehu</li>
+                    <li id="vichy" onClick="reply_click(this.id)">Vichy</li>
                     <li id="jallu" onClick="reply_click(this.id)">Jallu</li>
-                    <li id="appelsiinil">Appelsiinilikööri</li>
-                    <li id="lime">Lime</li>
-                    <li id="päärynäl">Päärynälikööri</li>
-                    <li id="sprite">Sprite</li>
-                    <li id="vodka">Vodka</li>
+                    <li id="appelsiinil" onClick="reply_click(this.id)">Appelsiinilikööri</li>
+                    <li id="lime" onClick="reply_click(this.id)">Lime</li>
+                    <li id="päärynäl" onClick="reply_click(this.id)">Päärynälikööri</li>
+                    <li id="sprite" onClick="reply_click(this.id)">Sprite</li>
+                    <li id="vodka" onClick="reply_click(this.id)">Vodka</li>
                 </ul>
                 </div>
             </div>
@@ -176,9 +179,9 @@ var valinnat = [];
       <div class="panel panel-default" style="height: 350px;">  
         <div id="Valinnat"class="panel-body">              
               <ul id="lista">
-                <a title="Valitsemasi ainesosat">
+                <div title="Valitsemasi ainesosat">
                 <h4>Valinnat</h4>
-                
+                </div>
               </ul>
         </div>
       </div>
@@ -190,6 +193,7 @@ var valinnat = [];
 </html>
 
 <?php
+
 class Drinkki {
     // Properties
     public $id;
@@ -203,9 +207,4 @@ class Drinkki {
       return $this->id;
     }
   }
-
-class Ainesosia extends Drinkki{
-
-
-}
 ?>

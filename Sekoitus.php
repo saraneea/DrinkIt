@@ -72,7 +72,7 @@
                   8: {id: "kossu ", nimi:"Kossu"}
                    };
 
- var  valitut = {};
+ var  ainesosat2 = ["Appelsiinimehu","Vichy","Jallu","Appelsiinilikööri","Lime","Päärynälikööri","Sprite","Vodka"];
 
  function move() {
   
@@ -102,6 +102,15 @@
 
 
 </script>
+<style>
+
+.jumbotron {
+  
+  background-image: url("https://images.unsplash.com/photo-1592647416745-3db83f5590d7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  background-size: cover;
+  height: 350px;
+}
+</style>
 </head>
 
 
@@ -133,8 +142,8 @@
       </div>
     </form>
 </nav>
-<div class="jumbotron text-center">
-  <h1>Lets mix it! </h1>
+<div class="jumbotron">
+  <h1 style="text-align: center">Lets mix it! </h1>
   
 </div>
 
