@@ -155,11 +155,30 @@
 </html>
 
 
+
 <?php
-public class Drinkki {
+class Drinkki {
   // Properties
   public $nimi;
   public $ainesosa;
   public $holi_prosentti;
+
+    function set_nimi($nimi) {
+    $this->nimi = $nimi;
+  }
+  function set_ainesosa($ainesosa) {
+     $this->ainesosa = $ainesosa;
+  }
+  function set_holi_prosentti($holi_prosentti) {
+    $this->holi_prosentti = $holi_prosentti;
 }
+
+
+var $rinkki = new Drinkki();
+$rinkki->set_nimi('Kossuvissy');
+$rinkki->set_ainesosa('vodka');
+$rinkki->set_holiprosentti('100');
+echo "Nimi: " . $apple->get_nimi();
+echo "Ainesosa";
+echo "Prosentti: " . $apple->get_holi_prosentti();
 ?>

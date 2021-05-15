@@ -168,7 +168,7 @@ var valinnat = [""];
        <span class="caret"></span></button>
           <ul class="dropdown-menu">
           <li><a onclick="location.href='Drinkkiohjeet.php'">Drinkkiohjeet</a></li>
-          <li><a onclick="location.href='Sekoitus.php'">Sekoitus generaattori</a></li>
+          <li><a onclick="location.href='Sekoitus2.php'">Sekoitus generaattori</a></li>
           <li><a onclick="location.href='index.php'">Etusivu</a></li>
           </ul>
       </div>
