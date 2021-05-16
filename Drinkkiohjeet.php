@@ -198,7 +198,7 @@ type="text/javascript">
 <div class="container">
  
   <div class="row">
-    <div class="panel panel-info">
+    <div class="panel panel-default">
             
         <!--Online Texts -->
         
@@ -231,36 +231,13 @@ type="text/javascript">
 
 <center> <button class="nappula" onclick="alert('Vodka-redbull\nvodka, redbull')">Vodka-redbull</button> </center>
 
+<center> <button class="nappula" onclick="alert('Pina Colada\nrommi, kookosmaito, ananasmehu')">Pina Colada</button> </center>
+
+<center> <button class="nappula" onclick="alert('Kelkka\nvodka, appelsiini, karpalolikööri')">Kelkka</button> </center>
+
 </div>
     <div class="col-sm-6">
-    <center> <button class="nappula" onclick="alert('Viskikola\nviski, coca-cola')">Viskikola</button> </center>
-
-<center> <button class="nappula" onclick="alert('Kossuvissy\nvodka, vissy')">Kossuvissy</button> </center>
-
-<center> <button class="nappula" onclick="alert('Blue-Lagoon\nvodka,blue curaqao, sprite')" >Blue-Lagoon </button> </center>
-
-<center> <button class="nappula" onclick="alert('Vodka-redbull\nvodka, redbull')">Vodka-redbull</button> </center>
-
-<center> <button class="nappula" onclick="alert('Pina Colada\nrommi, kookosmaito, ananasmehu')">Pina Colada</button> </center>
-
-<center> <button class="nappula" onclick="alert('Kelkka\nvodka, appelsiini, karpalolikööri')">Kelkka</button> </center>
-
-</div>
-</div>
-  
-<center> <button class="nappula" onclick="alert('Viskikola\nviski, coca-cola')">Viskikola</button> </center>
-
-<center> <button class="nappula" onclick="alert('Kossuvissy\nvodka, vissy')">Kossuvissy</button> </center>
-
-<center> <button class="nappula" onclick="alert('Blue-Lagoon\nvodka,blue curaqao, sprite')" >Blue-Lagoon </button> </center>
-
-<center> <button class="nappula" onclick="alert('Vodka-redbull\nvodka, redbull')">Vodka-redbull</button> </center>
-
-<center> <button class="nappula" onclick="alert('Pina Colada\nrommi, kookosmaito, ananasmehu')">Pina Colada</button> </center>
-
-<center> <button class="nappula" onclick="alert('Kelkka\nvodka, appelsiini, karpalolikööri')">Kelkka</button> </center>
-
-<center> <button class="nappula" onclick="alert('Ville Vallaton\nbanaanilikööri, maito, vodka')">Ville vallaton</button> </center>
+    <center> <button class="nappula" onclick="alert('Ville Vallaton\nbanaanilikööri, maito, vodka')">Ville vallaton</button> </center>
 
 <center> <button class="nappula" onclick="alert('Valkovenäläinen\nvodka,kahvilikööri, kuohukerma')">Valkovenäläinen</button> </center>
 
@@ -270,9 +247,11 @@ type="text/javascript">
 
 <center> <button class="nappula" onclick="alert('Jekkupommi\njägermaister, redbull')">Viskikola</button> </center>
 
-<center> <button class="nappula" onclick="alert('Viskikola\nviski, coca-cola')">Viskikola</button> </center>
 
-<center> <button class="nappula" onclick="alert('Viskikola\nviski, coca-cola')">Viskikola</button> </center>
+<center> <button class="nappula" onclick="alert('Niskalaukaus\n absintti')">Niskalaukaus</button> </center>
+</div>
+</div>
+  
     
   </div>
 </div> 
