@@ -59,27 +59,9 @@
 	}
     });
 });
-</script>
 
-<script type="text/javascript"> 
 
-var kossuvissy = ["vodka", "vissy"];
-var viskikola = ["viski","coca-cola"];
-var vodka_appelsiini = ["vodka", "appelsiini"];
-var blue_lagoon = ["blue-curaqao","sprite"];
-var pina_colada = ["kookos", "vodka"];
-var kelkka = ["vodka", "appelsiini", "karpalo"];
-var tequila_sunrise = ["tequila", "passion"];
-var niskalaukaus = ["absintti"];
 
-    function reply_click(clicked_id){
-         para = document.getElementById(clicked_id);
-         document.getElementById(clicked_id).style.display='block';
-         
-      
-     } 
- </script>
-<script>
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -89,15 +71,21 @@ var btn = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
-function avaa() {
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
   modal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-function sulje() {
-  //span.onclick = 
+span.onclick = function() {
   modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
 
 
@@ -129,14 +117,11 @@ type="text/javascript">
 
 </head>
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
-
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -146,18 +131,18 @@ body {font-family: Arial, Helvetica, sans-serif;}
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content */
+/* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: auto;
+  margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 80%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
 .close {
-  color: #aaaaaa;
+  color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -165,10 +150,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: black;
   text-decoration: none;
   cursor: pointer;
 }
+
 </style>
 <body>
 <nav class="navbar navbar-default">
@@ -238,39 +224,44 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 <div class="container">
   <div class="row">
-    <div id= "kelkka"><center>Kelkka</center></div>
-    <div onClick="reply_click(this.id)" id="kossuvissy"><center>Kossuvissy</center></div>
-    <div class="w-100"></div>
-    <div onClick="reply_click(this.id)" id="viskikola"><center>Viskikola</center></div>   
-    <div onClick="reply_click(this.id)" id="tequilasunrise"><center>Tequila Sunrise</center></div>
-    <div onClick="reply_click(this.id)" id="pinacolada"><center>Pina Colada</center></div>
-    <div onClick="reply_click(this.id)" id="bluelagoon"><center>Blue Laguun</center></div>
-    <div onClick="reply_click(this.id)" id="vodka_appelsiini"><center>Vodka-appelsiini</center></div>
-  </div>
-</div> 
+  
+<div class="col"> <center> <button onclick="alert('Viskikola\nviski, coca-cola')">Viskikola</button> </center>
+
+<div class="col"> <center> <button onclick="alert('Viskikola\nviski, coca-cola')">Viskikola</button> </center>
 
 <center> <button onclick="alert('Viskikola\nviski, coca-cola')">Viskikola</button> </center>
 
-<center> <button onclick="alert('Kossuvissy\nvodka,vissy')">Kossuvissy</button> </center>
+<center> <button onclick="alert('Viskikola\nviski, coca-cola')">Viskikola</button> </center>
 
-<!-- Trigger/Open The Modal -->
-<button id="myBtn">Avaa</button>
+<center> <button onclick="alert('Viskikola\nviski, coca-cola')">Viskikola</button> </center>
 
-        <h2>Modal Example</h2>
+<center> <button onclick="alert('Viskikola\nviski, coca-cola')">Viskikola</button> </center>
 
-        <!-- Trigger/Open The Modal -->
-        <button onclick="avaa()" id="myBtn">Open Modal</button>
+<center> <button onclick="alert('Viskikola\nviski, coca-cola')">Viskikola</button> </center>
 
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
+<center> <button onclick="alert('Viskikola\nviski, coca-cola')">Viskikola</button> </center>
 
-          <!-- Modal content -->
-          <div class="modal-content">
-            <span onclick="sulje()" class="close">&times;</span>
-            <p>Some text in the Modal..</p>
-          </div>
+<center> <button onclick="alert('Viskikola\nviski, coca-cola')">Viskikola</button> </center>
 
-        </div>       
+<center> <button onclick="alert('Viskikola\nviski, coca-cola')">Viskikola</button> </center>
+
+<center> <button onclick="alert('Viskikola\nviski, coca-cola')">Viskikola</button> </center>
+
+<center> <button onclick="alert('Viskikola\nviski, coca-cola')">Viskikola</button> </center>
+
+<center> <button onclick="alert('Viskikola\nviski, coca-cola')">Viskikola</button> </center>
+    
+  </div>
+</div> 
+
+
+
+
+
+  
+
+
+       
       </div>
     </div>
   </div>
@@ -278,6 +269,3 @@ body {font-family: Arial, Helvetica, sans-serif;}
 </body>
 </html>
 
-
-
-   
