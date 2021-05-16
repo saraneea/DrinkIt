@@ -72,19 +72,9 @@ function move() {
   
 }
   
-var ainesosat = {1:{id:"jallu", nimi:"Jallu"},
-                  2: {id: "appelsiinil", nimi:"Appelsiinilikööri"},
-                  3: {id: "lime", nimi:"Lime"},
-                  4: {id: "päärynäl", nimi:"Päärynälikööri"},
-                  5: {id: "sprite", nimi:"Sprite"},
-                  6: {id: "vodka", nimi:"Vodka"},
-                  7: {id: "vichy", nimi:"Vichy"},
-                  8: {id: "kossu ", nimi:"Kossu"}
-                   };
-
 
 var valinnat = [""];
-
+var kaikki = [];
 </script>
   <!--id nouto-->
   <script type="text/javascript">
@@ -98,11 +88,21 @@ var valinnat = [""];
         node.appendChild(textnode);
         document.getElementById("lista").appendChild(node); 
         
-        
+        //convertaa para arrayksi
         valinnat += [para];
-        alert(valinnat);
+        kaikki += [valinnat];
+        alert(kaikki);
 
     } 
+
+    function compareitems(){
+      //vertailu valintojen arrayta ja ohjeiden arrayta
+      for (i = 0; i < valinnat.length; i++){
+        document.writeln((i+1) + ": " + valinnat[i]);
+
+
+      }
+    }
   </script>
   <!---->
 </head>
@@ -180,7 +180,17 @@ var valinnat = [""];
 </div>
 
 <!-- livesearch -->
-<div class="container">  
+<div class="container"> 
+  <div class="row">
+    <div class="panel panel-default" style="width:auto height:60px">
+      <div class="panel-body">
+        <ul id="lista">
+          <h4>Valinnat</h4>
+        </ul> 
+      </div>
+    </div>
+ </div> 
+
   <div class="row">
     <div class="col-sm-6">
         <div class="panel panel-default" style="height: 350px;">            
@@ -200,6 +210,9 @@ var valinnat = [""];
                     <li id="päärynäl" onClick="reply_click(this.id)">Päärynälikööri</li>
                     <li id="sprite" onClick="reply_click(this.id)">Sprite</li>
                     <li id="vodka" onClick="reply_click(this.id)">Vodka</li>
+                    <li id="kookos" onClick="reply_click(this.id)">Kookoslikööri</li>
+                    <li id="bluecuraqao" onClick="reply_click(this.id)">Blue-Curaqao</li>
+                    <li id="coca-cola" onClick="reply_click(this.id)">Coca-Cola</li>
                 </ul>
                 </div>
             </div>
@@ -208,9 +221,10 @@ var valinnat = [""];
     <div class="col-sm-6">
       <div class="panel panel-default" style="height: 350px;">  
         <div id="Valinnat"class="panel-body">              
-              <ul id="lista">
-                <div title="Valitsemasi ainesosat">
-                <h4>Valinnat</h4>
+              <ul id="ohjeet">
+                <div title="Ohjeet valitsemistasi ainesosista">
+                    <h4>Ohjeet</h4>
+                     <p onClick="compareitems()">Hae valintoja</p>
                 </div>
               </ul>
         </div>
