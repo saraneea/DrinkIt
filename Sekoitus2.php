@@ -11,6 +11,7 @@
   <!--JQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
+
 <!-- Bootstrap CSS -->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
 <!-- Bootstrap Javascript -->
@@ -72,7 +73,7 @@ function move() {
   
 }
   
-
+var p = 0;
 var valinnat = [];
 var kaikki = [[valinnat]];
 </script>
@@ -88,26 +89,110 @@ var kaikki = [[valinnat]];
         node.appendChild(textnode);
         document.getElementById("lista").appendChild(node); 
      
-       
-       valinnat += para;
+        valinnat[p] = document.getElementById(clicked_id).innerText;
+        //valinnat[p] = document.getElementById("jallu").innerText;
+        
+       // array[x] = document.getElementById("text1").value;
+        alert("Element: " + valinnat[p] + " Added at index " + p);
+        p++;
+        document.getElementById(clicked_id).value = "";
+      // valinnat += [para];
        
         alert(valinnat);
      
        // valinnat = JSON.parse("[" + para + "]");
-       // valinnat.push(para);
-       
-       // alert(valinnat);
+      
     } 
 
     function compareitems(){
       //vertailu valintojen arrayta ja ohjeiden arrayta
       for (i = 0; i < valinnat.length; i++){
-
-        document.writeln(valinnat);
-        
+              
         document.writeln((i+1) + ": " + valinnat[i]);
       }
     }
+    var kossuvissy = ["vodka", "vissy"];
+    var viskikola = ["viski","coca-cola"];
+    var vodka_appelsiini = ["vodka", "appelsiini"];
+    var blue_lagoon = ["blue-curaqao","sprite"];
+    var pina_colada = ["kookos", "vodka"];
+    var kelkka = ["vodka", "appelsiini", "karpalo"];
+    var tequila_sunrise = ["tequila", "passion"];
+    var niskalaukaus = ["absintti"];
+
+  
+
+   /*function findDrink(){
+      var result = result1.filter(function (o1) {
+          return result2.some(function (o2) {
+              return o1.id === o2.id; // return the ones with equal id
+        });
+      });
+      // if you want to be more clever...
+      let result = result1.filter(o1 => result2.some(o2 => o1.id === o2.id));
+    }
+*/
+    
+    // Declare two array
+    var array1 = ['Jallu', 'b', 'c', 'd'];
+    var array2 = ['Jallu', 'Vodka', 'Sprite'];
+    
+    // Function definiton with passing two arrays
+    function findCommonElement(array1, array2) {
+          
+        // Loop for array1
+        for(let i = 0; i < array1.length; i++) {
+              
+            // Loop for array2
+            for(let j = 0; j < array2.length; j++) {
+                  
+                // Compare the element of each and
+                // every element from both of the
+                // arrays
+                if(array1[i] === array2[j]) {
+                  
+                    // Return if common element found
+                    return true;  
+                                  
+                }
+            }
+        }
+        // Return if no common element exist
+        return false; 
+    }
+      
+    document.write(findCommonElement(array1, array2))
+
+
+
+    // Declare Two array
+    </script>
+
+
+
+  <script>
+    var x = 0;
+    var array = Array();
+
+      function add_element_to_array()
+      {
+        array[x] = document.getElementById("text1").value;
+        alert("Element: " + array[x] + " Added at index " + x);
+        x++;
+        document.getElementById("text1").value = "";
+      }
+
+      function display_array()
+      {
+        var e = "<hr/>";   
+          
+        for (var y=0; y<array.length; y++)
+        {
+          e += "Element " + y + " = " + array[y] + "<br/>";
+        }
+        document.getElementById("Result").innerHTML = e;
+      }
+
   </script>
   <!---->
 </head>
@@ -187,7 +272,7 @@ var kaikki = [[valinnat]];
 <!-- livesearch -->
 <div class="container"> 
   <div class="row">
-    <div class="panel panel-default" style="width:auto height:60px">
+    <div class="panel panel-default" style="width:90% height:60px">
       <div class="panel-body">
         <ul id="lista">
           <h4>Valinnat</h4>
@@ -230,6 +315,13 @@ var kaikki = [[valinnat]];
                 <div title="Ohjeet valitsemistasi ainesosista">
                     <h4>Ohjeet</h4>
                      <p onClick="compareitems()">Hae valintoja</p>
+                     <input type="text" id="text1"></input>
+                      <input type="button" id="button1" value="Add" onclick="add_element_to_array();"></input>
+                      <input type="button" id="button2" value="Display" onclick="display_array();"></input>                      
+                      <div id="Result"></div>
+
+                      <button id="nappi" onClick="findCommonElement(array1, array2)"> Tulokset</button>
+                      
                     
                 </div>
               </ul>
@@ -237,6 +329,7 @@ var kaikki = [[valinnat]];
       </div>
     </div>
   </div>
+                      
 </div>
 
 </body>

@@ -6,6 +6,7 @@
   <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
   <!--
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -129,46 +130,40 @@ type="text/javascript">
 
 </head>
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+.jumbotron {
+  
+  background-image: url("https://images.unsplash.com/photo-1525268323446-0505b6fe7778?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80");
+  background-size: cover;
+  height: 400px;
+  width: auto; 
+  
 }
 
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+.teksti{
+  text-align: center;
+  font-family: "Pacifico";
+  padding-top: 100px;
+  text-shadow: 0 0 5px #FF0000;
 }
 
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.navbar{
+  height: 60px;
+  margin-bottom:0px;
+  background-color: white ;
 }
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+.btn{
+
+  border-style: round;
+  border-color: #404040;
+  border-width: 2px;
 }
+
+.navbar-brand{
+  font-family: "Pacifico";
+  color: black;
+}
+
 </style>
 <body>
 <nav class="navbar navbar-default">
@@ -191,7 +186,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
       </form>
     <form class="navbar-form navbar-left">
       <div class="dropdown">
-       <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Valikko
+       <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Valikko
        <span class="caret"></span></button>
           <ul class="dropdown-menu">
           <li><a onclick="location.href='Drinkkiohjeet.php'">Drinkkiohjeet</a></li>
@@ -202,8 +197,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
     </form>
 </nav>
 <div class="jumbotron text-center">
-  <h1>Drinkkiohjeet </h1>
-  <p>Selaa valmiita ohjeita</p> 
+  <h1 class="teksti" style="color:black">Drinkkiohjeet </h1>
+  <p class="teksti" style="color:black">Selaa valmiita ohjeita</p> 
 </div>
 <div class="container">
 
@@ -253,24 +248,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 <center> <button onclick="alert('Kossuvissy\nvodka,vissy')">Kossuvissy</button> </center>
 
-<!-- Trigger/Open The Modal -->
-<button id="myBtn">Avaa</button>
-
-        <h2>Modal Example</h2>
-
-        <!-- Trigger/Open The Modal -->
-        <button onclick="avaa()" id="myBtn">Open Modal</button>
-
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-
-          <!-- Modal content -->
-          <div class="modal-content">
-            <span onclick="sulje()" class="close">&times;</span>
-            <p>Some text in the Modal..</p>
-          </div>
-
-        </div>       
+       
       </div>
     </div>
   </div>
