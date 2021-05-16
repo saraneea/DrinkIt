@@ -61,40 +61,11 @@
 });
 
 
-
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-
-
 </script>
 
 
 
-<script> 
+<script type="text/javascript"> 
 
 var kossuvissy = ["vodka", "vissy"];
 var viskikola = ["viski","coca-cola"];
@@ -105,21 +76,24 @@ var kelkka = ["vodka", "appelsiini", "karpalo"];
 var tequila_sunrise = ["tequila", "passion"];
 var niskalaukaus = ["absintti"];
 
-type="text/javascript">
-    function reply_click(clicked_id)
-    {
-     para = document.getElementById(clicked_id).innerText;
+    function reply_click(clicked_id){
+         para = document.getElementById(clicked_id);
+         
+      
      } 
  </script>
 
 
 </head>
 <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -129,18 +103,18 @@ type="text/javascript">
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content/Box */
+/* Modal Content */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%;
 }
 
 /* The Close Button */
 .close {
-  color: #aaa;
+  color: #aaaaaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -148,11 +122,10 @@ type="text/javascript">
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: #000;
   text-decoration: none;
   cursor: pointer;
 }
-
 </style>
 <body>
 <nav class="navbar navbar-default">
