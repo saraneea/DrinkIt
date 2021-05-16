@@ -315,12 +315,13 @@ var kaikki = [[valinnat]];
                 <div title="Ohjeet valitsemistasi ainesosista">
                     <h4>Ohjeet</h4>
                      <p onClick="compareitems()">Hae valintoja</p>
-                     <input type="text" id="text1"></input>
+                     <!--<input type="text" id="text1"></input>
+
                       <input type="button" id="button1" value="Add" onclick="add_element_to_array();"></input>
                       <input type="button" id="button2" value="Display" onclick="display_array();"></input>                      
-                      <div id="Result"></div>
+                      <div id="Result"></div-->
 
-                      <button id="nappi" onClick="findCommonElement(array1, array2)"> Tulokset</button>
+                    <!--button id="nappi" onClick="findCommonElement(array1, array2)"> Tulokset</button-->
                       
                     
                 </div>
