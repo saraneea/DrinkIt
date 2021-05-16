@@ -109,8 +109,10 @@ type="text/javascript">
     function reply_click(clicked_id)
     {
      para = document.getElementById(clicked_id).innerText;
+     <button onclick="alert('Viskikola\nviski, coca-cola')">Avaa </button>
      } 
- </script>
+
+</script>
 
 
 </head>
@@ -233,10 +235,12 @@ type="text/javascript">
   </div>
 </div> 
 
+<center> <button onclick="alert('Viskikola\nviski, coca-cola')">Viskikola</button> </center>
 
+<center> <button onclick="alert('Kossuvissy\nvodka,vissy')">Kossuvissy</button> </center>
 
 <!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button>
+<button id="myBtn">Avaa</button>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
