@@ -59,9 +59,27 @@
 	}
     });
 });
+</script>
 
+<script type="text/javascript"> 
 
+var kossuvissy = ["vodka", "vissy"];
+var viskikola = ["viski","coca-cola"];
+var vodka_appelsiini = ["vodka", "appelsiini"];
+var blue_lagoon = ["blue-curaqao","sprite"];
+var pina_colada = ["kookos", "vodka"];
+var kelkka = ["vodka", "appelsiini", "karpalo"];
+var tequila_sunrise = ["tequila", "passion"];
+var niskalaukaus = ["absintti"];
 
+    function reply_click(clicked_id){
+         para = document.getElementById(clicked_id);
+         document.getElementById(clicked_id).style.display='block';
+         
+      
+     } 
+ </script>
+<script>
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -71,21 +89,15 @@ var btn = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
+// When the user clicks the button, open the modal 
+function avaa() {
   modal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+function sulje() {
+  //span.onclick = 
   modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
 }
 
 
@@ -117,11 +129,14 @@ type="text/javascript">
 
 </head>
 <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -131,18 +146,18 @@ type="text/javascript">
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content/Box */
+/* Modal Content */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%;
 }
 
 /* The Close Button */
 .close {
-  color: #aaa;
+  color: #aaaaaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -150,11 +165,10 @@ type="text/javascript">
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: #000;
   text-decoration: none;
   cursor: pointer;
 }
-
 </style>
 <body>
 <nav class="navbar navbar-default">
@@ -242,20 +256,21 @@ type="text/javascript">
 <!-- Trigger/Open The Modal -->
 <button id="myBtn">Avaa</button>
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
+        <h2>Modal Example</h2>
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
-  </div>
+        <!-- Trigger/Open The Modal -->
+        <button onclick="avaa()" id="myBtn">Open Modal</button>
 
-</div>
-  
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
 
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span onclick="sulje()" class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+          </div>
 
-       
+        </div>       
       </div>
     </div>
   </div>
