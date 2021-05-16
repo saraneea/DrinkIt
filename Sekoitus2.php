@@ -73,8 +73,8 @@ function move() {
 }
   
 
-var valinnat = [""];
-var kaikki = [];
+var valinnat = [];
+var kaikki = [[valinnat]];
 </script>
   <!--id nouto-->
   <script type="text/javascript">
@@ -87,20 +87,25 @@ var kaikki = [];
         var textnode = document.createTextNode(para);
         node.appendChild(textnode);
         document.getElementById("lista").appendChild(node); 
-        
-        //convertaa para arrayksi
-        valinnat += [para];
-        kaikki += [valinnat];
-        alert(kaikki);
-
+     
+       
+       valinnat += para;
+       
+        alert(valinnat);
+     
+       // valinnat = JSON.parse("[" + para + "]");
+       // valinnat.push(para);
+       
+       // alert(valinnat);
     } 
 
     function compareitems(){
       //vertailu valintojen arrayta ja ohjeiden arrayta
       for (i = 0; i < valinnat.length; i++){
+
+        document.writeln(valinnat);
+        
         document.writeln((i+1) + ": " + valinnat[i]);
-
-
       }
     }
   </script>
@@ -225,6 +230,7 @@ var kaikki = [];
                 <div title="Ohjeet valitsemistasi ainesosista">
                     <h4>Ohjeet</h4>
                      <p onClick="compareitems()">Hae valintoja</p>
+                    
                 </div>
               </ul>
         </div>
