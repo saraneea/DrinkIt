@@ -89,8 +89,8 @@ var kaikki = [[valinnat]];
         document.getElementById("lista").appendChild(node); 
      
        
-       valinnat = valinnat + para.split();
-
+       valinnat += para;
+       
         alert(valinnat);
      
        // valinnat = JSON.parse("[" + para + "]");
@@ -102,6 +102,8 @@ var kaikki = [[valinnat]];
     function compareitems(){
       //vertailu valintojen arrayta ja ohjeiden arrayta
       for (i = 0; i < valinnat.length; i++){
+
+        document.writeln(valinnat);
         
         document.writeln((i+1) + ": " + valinnat[i]);
       }
