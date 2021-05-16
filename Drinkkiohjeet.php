@@ -59,11 +59,7 @@
 	}
     });
 });
-
-
 </script>
-
-
 
 <script type="text/javascript"> 
 
@@ -78,11 +74,35 @@ var niskalaukaus = ["absintti"];
 
     function reply_click(clicked_id){
          para = document.getElementById(clicked_id);
+         document.getElementById(clicked_id).style.display='block';
          
       
      } 
  </script>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
 
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+function avaa() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+function sulje() {
+  //span.onclick = 
+  modal.style.display = "none";
+}
+
+
+
+</script>
 
 </head>
 <style>
@@ -193,38 +213,35 @@ body {font-family: Arial, Helvetica, sans-serif;}
         -->
         
 
-<div class="container">
-  <div class="row">
-    <div id= "kelkka"><center>Kelkka</center></div>
-    <div onClick="reply_click(this.id)" id="kossuvissy"><center>Kossuvissy</center></div>
-    <div class="w-100"></div>
-    <div onClick="reply_click(this.id)" id="viskikola"><center>Viskikola</center></div>   
-    <div onClick="reply_click(this.id)" id="tequilasunrise"><center>Tequila Sunrise</center></div>
-    <div onClick="reply_click(this.id)" id="pinacolada"><center>Pina Colada</center></div>
-    <div onClick="reply_click(this.id)" id="bluelagoon"><center>Blue Laguun</center></div>
-    <div onClick="reply_click(this.id)" id="vodka_appelsiini"><center>Vodka-appelsiini</center></div>
-  </div>
-</div> 
+      <div class="container">
+        <div class="row">
+          <div id= "kelkka"><center>Kelkka</center></div>
+          <div onClick="reply_click(this.id)" id="kossuvissy"><center>Kossuvissy</center></div>
+          <div class="w-100"></div>
+          <div onClick="reply_click(this.id)" id="viskikola"><center>Viskikola</center></div>   
+          <div onClick="reply_click(this.id)" id="tequilasunrise"><center>Tequila Sunrise</center></div>
+          <div onClick="reply_click(this.id)" id="pinacolada"><center>Pina Colada</center></div>
+          <div onClick="reply_click(this.id)" id="bluelagoon"><center>Blue Laguun</center></div>
+          <div onClick="reply_click(this.id)" id="vodka_appelsiini"><center>Vodka-appelsiini</center></div>
+        </div>
+      </div> 
 
 
+        <h2>Modal Example</h2>
 
-<!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button>
+        <!-- Trigger/Open The Modal -->
+        <button onclick="avaa()" id="myBtn">Open Modal</button>
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
-  </div>
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span onclick="sulje()" class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+          </div>
 
-</div>
-  
-
-
-       
+        </div>       
       </div>
     </div>
   </div>
