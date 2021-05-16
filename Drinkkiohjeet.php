@@ -61,6 +61,35 @@
 });
 
 
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
 </script>
 
 
@@ -76,9 +105,55 @@ var kelkka = ["vodka", "appelsiini", "karpalo"];
 var tequila_sunrise = ["tequila", "passion"];
 var niskalaukaus = ["absintti"];
 
-</script>
+type="text/javascript">
+    function reply_click(clicked_id)
+    {
+     para = document.getElementById(clicked_id).innerText;
+     } 
+ </script>
+
 
 </head>
+<style>
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+</style>
 <body>
 <nav class="navbar navbar-default">
     <div class="navbar-header">
@@ -115,7 +190,6 @@ var niskalaukaus = ["absintti"];
   <p>Selaa valmiita ohjeita</p> 
 </div>
 <div class="container">
-   
 
     
   
@@ -148,17 +222,32 @@ var niskalaukaus = ["absintti"];
 
 <div class="container">
   <div class="row">
-    <div class="col"><center>Kelkka</center></div>
-    <div class="col"><center>Välivesi</center></div>
+    <div id= "kelkka"><center>Kelkka</center></div>
+    <div onClick="reply_click(this.id)" id="kossuvissy"><center>Kossuvissy</center></div>
     <div class="w-100"></div>
-    <div class="col"><center>Jallukola</center></div>
-    <div class="col"><center>Kossuvissy</center></div>
-    <div class="col"><center>Tequila Sunrise</center></div>
-    <div class="col"><center>Pina Colada</center></div>
-    <div class="col"><center>Blue Laguun</center></div>
-    <div class="col"><center>Kossu-appelsiini</center></div>
+    <div onClick="reply_click(this.id)" id="viskikola"><center>Viskikola</center></div>   
+    <div onClick="reply_click(this.id)" id="tequilasunrise"><center>Tequila Sunrise</center></div>
+    <div onClick="reply_click(this.id)" id="pinacolada"><center>Pina Colada</center></div>
+    <div onClick="reply_click(this.id)" id="bluelagoon"><center>Blue Laguun</center></div>
+    <div onClick="reply_click(this.id)" id="vodka_appelsiini"><center>Vodka-appelsiini</center></div>
   </div>
 </div> 
+
+
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
   
 
 
