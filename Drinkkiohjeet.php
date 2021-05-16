@@ -60,27 +60,9 @@
 	}
     });
 });
-</script>
 
-<script type="text/javascript"> 
 
-var kossuvissy = ["vodka", "vissy"];
-var viskikola = ["viski","coca-cola"];
-var vodka_appelsiini = ["vodka", "appelsiini"];
-var blue_lagoon = ["blue-curaqao","sprite"];
-var pina_colada = ["kookos", "vodka"];
-var kelkka = ["vodka", "appelsiini", "karpalo"];
-var tequila_sunrise = ["tequila", "passion"];
-var niskalaukaus = ["absintti"];
 
-    function reply_click(clicked_id){
-         para = document.getElementById(clicked_id);
-         document.getElementById(clicked_id).style.display='block';
-         
-      
-     } 
- </script>
-<script>
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -90,15 +72,21 @@ var btn = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
-function avaa() {
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
   modal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-function sulje() {
-  //span.onclick = 
+span.onclick = function() {
   modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
 
 
@@ -233,20 +221,82 @@ type="text/javascript">
 
 <div class="container">
   <div class="row">
-    <div id= "kelkka"><center>Kelkka</center></div>
-    <div onClick="reply_click(this.id)" id="kossuvissy"><center>Kossuvissy</center></div>
-    <div class="w-100"></div>
-    <div onClick="reply_click(this.id)" id="viskikola"><center>Viskikola</center></div>   
-    <div onClick="reply_click(this.id)" id="tequilasunrise"><center>Tequila Sunrise</center></div>
-    <div onClick="reply_click(this.id)" id="pinacolada"><center>Pina Colada</center></div>
-    <div onClick="reply_click(this.id)" id="bluelagoon"><center>Blue Laguun</center></div>
-    <div onClick="reply_click(this.id)" id="vodka_appelsiini"><center>Vodka-appelsiini</center></div>
+    <div class="col-sm-6">
+    
+    <center> <button class="nappula" onclick="alert('Viskikola\nviski, coca-cola')">Viskikola</button> </center>
+
+<center> <button class="nappula" onclick="alert('Kossuvissy\nvodka, vissy')">Kossuvissy</button> </center>
+
+<center> <button class="nappula" onclick="alert('Blue-Lagoon\nvodka,blue curaqao, sprite')" >Blue-Lagoon </button> </center>
+
+<center> <button class="nappula" onclick="alert('Vodka-redbull\nvodka, redbull')">Vodka-redbull</button> </center>
+
+</div>
+    <div class="col-sm-6">
+    <center> <button class="nappula" onclick="alert('Viskikola\nviski, coca-cola')">Viskikola</button> </center>
+
+<center> <button class="nappula" onclick="alert('Kossuvissy\nvodka, vissy')">Kossuvissy</button> </center>
+
+<center> <button class="nappula" onclick="alert('Blue-Lagoon\nvodka,blue curaqao, sprite')" >Blue-Lagoon </button> </center>
+
+<center> <button class="nappula" onclick="alert('Vodka-redbull\nvodka, redbull')">Vodka-redbull</button> </center>
+
+<center> <button class="nappula" onclick="alert('Pina Colada\nrommi, kookosmaito, ananasmehu')">Pina Colada</button> </center>
+
+<center> <button class="nappula" onclick="alert('Kelkka\nvodka, appelsiini, karpalolikööri')">Kelkka</button> </center>
+
+</div>
+</div>
+  
+<center> <button class="nappula" onclick="alert('Viskikola\nviski, coca-cola')">Viskikola</button> </center>
+
+<center> <button class="nappula" onclick="alert('Kossuvissy\nvodka, vissy')">Kossuvissy</button> </center>
+
+<center> <button class="nappula" onclick="alert('Blue-Lagoon\nvodka,blue curaqao, sprite')" >Blue-Lagoon </button> </center>
+
+<center> <button class="nappula" onclick="alert('Vodka-redbull\nvodka, redbull')">Vodka-redbull</button> </center>
+
+<center> <button class="nappula" onclick="alert('Pina Colada\nrommi, kookosmaito, ananasmehu')">Pina Colada</button> </center>
+
+<center> <button class="nappula" onclick="alert('Kelkka\nvodka, appelsiini, karpalolikööri')">Kelkka</button> </center>
+
+<center> <button class="nappula" onclick="alert('Ville Vallaton\nbanaanilikööri, maito, vodka')">Ville vallaton</button> </center>
+
+<center> <button class="nappula" onclick="alert('Valkovenäläinen\nvodka,kahvilikööri, kuohukerma')">Valkovenäläinen</button> </center>
+
+<center> <button class="nappula" onclick="alert('Rommikola\nrommi, coca-cola')">Rommikola</button> </center>
+
+<center> <button class="nappula" onclick="alert('Pirunmaito\nsalmiakkiviina, maito')">Pirunmaito</button> </center>
+
+<center> <button class="nappula" onclick="alert('Jekkupommi\njägermaister, redbull')">Viskikola</button> </center>
+
+<center> <button class="nappula" onclick="alert('Viskikola\nviski, coca-cola')">Viskikola</button> </center>
+
+<center> <button class="nappula" onclick="alert('Viskikola\nviski, coca-cola')">Viskikola</button> </center>
+    
   </div>
 </div> 
 
-<center> <button onclick="alert('Viskikola\nviski, coca-cola')">Viskikola</button> </center>
 
-<center> <button onclick="alert('Kossuvissy\nvodka,vissy')">Kossuvissy</button> </center>
+<style>
+
+.nappula{
+  height: 30px;
+  width: 150px;
+  margin-bottom:5px;
+  background-color: light grey;
+  border-style: round;
+  border-color: #404040;
+  border-width: 2px;
+}
+
+</style>
+
+
+
+
+  
+
 
        
       </div>
@@ -256,6 +306,3 @@ type="text/javascript">
 </body>
 </html>
 
-
-
-   
